@@ -17,10 +17,12 @@ var campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
     
     // seedDB();  //seed the database
-    
-// var url = process.env.DATABASEURL || "mongodb://localhost/YelpCampWithoutMongoDBAtlas"
 
-mongoose.connect("mongodb://localhost/YelpCampWithoutMongoDBAtlas",
+//   console.log(process.env.DATABASEURL); 
+ 
+// mongoose.connect("mongodb://localhost/YelpCampWithoutMongoDBAtlas",
+var url = process.env.DATABASEURL || "mongodb://localhost/YelpCampWithoutMongoDBAtlas"
+mongoose.connect(url,
     {
     useNewUrlParser: true,
     useUnifiedTopology: true
